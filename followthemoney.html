@@ -22,6 +22,7 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.1.0/Chart.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -67,13 +68,11 @@
       <div class="container">
       <h2>About spending on Schools</h2>
       <p>Information about how the budget was spent on schools</p>
-
-      <canvas id="schoolchart" width="500" height="400"></canvas>
-
+      <div>
+      <canvas id="schoolchart" width="400" height="400"></canvas>
+      </div>
       <script type="text/javascript">
-
-      var ctx = document.getElementById("schoolchart").getContext("2d");
-      var myBarChart = new Chart(ctx).Bar(data);
+          
       var data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
@@ -95,9 +94,9 @@
         }
     ]
 };
+     var ctx = document.getElementById("schoolchart").getContext("2d");
 
-
-
+      var myBarChart = new Chart(ctx).Bar(data);
 
       </script>
       </div>
@@ -156,7 +155,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.1.0/Chart.min.js"></script>
+        
 
         <script src="js/main.js"></script>
 

@@ -51,19 +51,84 @@
         </div--><!--/.navbar-collapse -->
       </div>
     </nav>
+    <div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#Schools" aria-controls="Schools" role="tab" data-toggle="tab">Schools</a></li>
+    <li role="presentation"><a href="#Hospitals" aria-controls="Hospitals" role="tab" data-toggle="tab">Hospitals</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="Schools">
+      <div class="container">
+      <h2>About spending on Schools</h2>
+      <p>Information about how the budget was spent on schools</p>
+
+      <canvas id="schoolchart" width="500" height="400"></canvas>
+
+      <script type="text/javascript">
+
+      var ctx = document.getElementById("schoolchart").getContext("2d");
+      var myBarChart = new Chart(ctx).Bar(data);
+      var data = {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+        {
+            label: "My First dataset",
+            fillColor: "rgba(220,220,220,0.5)",
+            strokeColor: "rgba(220,220,220,0.8)",
+            highlightFill: "rgba(220,220,220,0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [65, 59, 80, 81, 56, 55, 40]
+        },
+        {
+            label: "My Second dataset",
+            fillColor: "rgba(151,187,205,0.5)",
+            strokeColor: "rgba(151,187,205,0.8)",
+            highlightFill: "rgba(151,187,205,0.75)",
+            highlightStroke: "rgba(151,187,205,1)",
+            data: [28, 48, 40, 19, 86, 27, 90]
+        }
+    ]
+};
+
+
+
+
+      </script>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="Hospitals">
+      <h2>About spending on Hospitals</h2>
+      <p>Information about how the budget was spent on hospitals</p>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+  </div>
+<hr>
+
+      <footer>
+        <p>Where's my money? #BudgetHack 2016</p>
+      </footer>
+</div>
+
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <!--div class="jumbotron">
       <div class="container">
         <h1>Hello, world!</h1>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
       </div>
-    </div>
+    </div-->
 
-    <div class="container">
+    <!--div class="container">
       <!-- Example row of columns -->
-      <div class="row">
+      <!--div class="row">
         <div class="col-md-4">
           <h2>Heading</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
@@ -86,10 +151,12 @@
       <footer>
         <p>&copy; Company 2015</p>
       </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </div--> <!-- /container -->        
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.1.0/Chart.min.js"></script>
 
         <script src="js/main.js"></script>
 

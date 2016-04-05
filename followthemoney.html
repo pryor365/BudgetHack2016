@@ -67,30 +67,47 @@
     <div role="tabpanel" class="tab-pane active" id="Schools">
       <div class="container">
       <h2>About spending on Schools</h2>
-      <p>Information about how the budget was spent on schools</p>
+      <p>Information about how the budget was spent on building new schools in Victoria across the last four budgets</p>
+      <p class="small">[This is approximated data, and not all new school projects are shown. This is for example only.]</p>
       <div>
-      <canvas id="schoolchart" width="400" height="400"></canvas>
+      <canvas id="schoolchart" width="600" height="600"></canvas>
       </div>
       <script type="text/javascript">
           
       var data = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    labels: ["Doreen South Primary School","Western Region P-12 Autistic School","Officer Secondary College","Melton North West Primary School","Wyndham Vale South Primary School", "Prahran Secondary School","Truganina P-9 School","Craigieburn North West Primary School"],
     datasets: [
         {
-            label: "My First dataset",
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "rgba(220,220,220,0.8)",
-            highlightFill: "rgba(220,220,220,0.75)",
-            highlightStroke: "rgba(220,220,220,1)",
-            data: [65, 59, 80, 81, 56, 55, 40]
+            label: "Y1213 est",
+            fillColor: "#FF0000",
+            strokeColor: "#FF0000",
+            highlightFill: "#FF4040",
+            highlightStroke: "#FF4040",
+            data: [3911000,350000,0,0,0,0,0,0]
         },
         {
-            label: "My Second dataset",
-            fillColor: "rgba(151,187,205,0.5)",
-            strokeColor: "rgba(151,187,205,0.8)",
-            highlightFill: "rgba(151,187,205,0.75)",
-            highlightStroke: "rgba(151,187,205,1)",
-            data: [28, 48, 40, 19, 86, 27, 90]
+            label: "Y1314 est",
+            fillColor: "#FFAB00",
+            strokeColor: "#FFAB00",
+            highlightFill: "#FFC040",
+            highlightStroke: "#FFC040",
+            data: [6089000,3650000,696000,5445000,1870000,0,0,0]
+        },
+        {
+            label: "Y1415 est",
+            fillColor: "#123EAB",
+            strokeColor: "#123EAB",
+            highlightFill: "#466FD5",
+            highlightStroke: "#466FD5",
+            data: [0,7268000,3900000,6055000,9630000,1000000,2100000,0]
+        },
+        {
+            label: "Y1516 est",
+            fillColor: "#00CC00",
+            strokeColor: "#00CC00",
+            highlightFill: "#39E639",
+            highlightStroke: "#39E639",
+            data: [0,2230000,9063000,0,0,4750000,4853000,3660000]
         }
     ]
 };

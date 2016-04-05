@@ -58,9 +58,8 @@
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#Schools" aria-controls="Schools" role="tab" data-toggle="tab">Schools</a></li>
     <li role="presentation"><a href="#Hospitals" aria-controls="Hospitals" role="tab" data-toggle="tab">Hospitals</a></li>
-    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-  </ul>
+    <li role="presentation"><a href="#Bypass" aria-controls="Bypass" role="tab" data-toggle="tab">Bypasses</a></li>
+    </ul>
 
   <!-- Tab panes -->
   <div class="tab-content">
@@ -119,11 +118,114 @@
       </div>
     </div>
     <div role="tabpanel" class="tab-pane" id="Hospitals">
+      <div class="container">
       <h2>About spending on Hospitals</h2>
       <p>Information about how the budget was spent on hospitals</p>
+      <p class="small">[This is approximated data, and not all hospital projects are shown. This is for example only.]</p>
+      <div>
+       <canvas id="hospitalchart" width="600" height="600"></canvas>
+      </div>
+       <script type="text/javascript">
+          
+      var data = {
+    labels: ["Bendigo Hospital","Box Hill Hospital","Monash Children Hospital","Numurkah Hospital","Waurn Ponds Community Hospital","Boort Hospital","Latrobe Regional Hospital"],
+    datasets: [
+        {
+            label: "Y1213 est",
+            fillColor: "#FF0000",
+            strokeColor: "#FF0000",
+            highlightFill: "#FF4040",
+            highlightStroke: "#FF4040",
+            data: [12037000,143900000,9230000,0,0,0,0]
+        },
+        {
+            label: "Y1314 est",
+            fillColor: "#FFAB00",
+            strokeColor: "#FFAB00",
+            highlightFill: "#FFC040",
+            highlightStroke: "#FFC040",
+            data: [83560000,302800000,18500000,3500000,2040000,0,0]
+        },
+        {
+            label: "Y1415 est",
+            fillColor: "#123EAB",
+            strokeColor: "#123EAB",
+            highlightFill: "#466FD5",
+            highlightStroke: "#466FD5",
+            data: [97545000,411800000,45600000,11900000,4055000,2200000,2500000]
+        },
+        {
+            label: "Y1516 est",
+            fillColor: "#00CC00",
+            strokeColor: "#00CC00",
+            highlightFill: "#39E639",
+            highlightStroke: "#39E639",
+            data: [15300000,35700000,110000000,6400000,3400000,7800000,12500000]
+        }
+    ]
+};
+     var ctx = document.getElementById("hospitalchart").getContext("2d");
+
+      var myBarCharth = new Chart(ctx).Bar(data);
+
+      </script>
     </div>
-    <div role="tabpanel" class="tab-pane" id="messages">...</div>
-    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="Bypass">
+      <div class="container">
+      <h2>About spending on Bypasses</h2>
+      <p>Information about how the budget was spent on building bypasses</p>
+      <p class="small">[This is approximated data, and not all bypass projects are shown. This is for example only.]</p>
+      <div>
+       <canvas id="bypasschart" width="600" height="600"></canvas>
+      </div>
+       <script type="text/javascript">
+          
+      var data = {
+    labels: ["Kilmore Wallan bypass","Dingley bypass","Koo Wee Rup bypass","Goulburn Valley Nagambie bypass","Drysdale Bypass"],
+    datasets: [
+        {
+            label: "Y1213 est",
+            fillColor: "#FF0000",
+            strokeColor: "#FF0000",
+            highlightFill: "#FF4040",
+            highlightStroke: "#FF4040",
+            data: [515000,29303000,13174000,19907000,0]
+        },
+        {
+            label: "Y1314 est",
+            fillColor: "#FFAB00",
+            strokeColor: "#FFAB00",
+            highlightFill: "#FFC040",
+            highlightStroke: "#FFC040",
+            data: [7860000,41103000,28247000,2252000,0]
+        },
+        {
+            label: "Y1415 est",
+            fillColor: "#123EAB",
+            strokeColor: "#123EAB",
+            highlightFill: "#466FD5",
+            highlightStroke: "#466FD5",
+            data: [9500000,83659000,60025000,0,1800000]
+        },
+        {
+            label: "Y1516 est",
+            fillColor: "#00CC00",
+            strokeColor: "#00CC00",
+            highlightFill: "#39E639",
+            highlightStroke: "#39E639",
+            data: [3900000,45902000,5079000,0,200000]
+        }
+    ]
+};
+     var ctx = document.getElementById("bypasschart").getContext("2d");
+
+      var myBarChartb = new Chart(ctx).Bar(data);
+
+      </script>
+
+    </div>
+    </div>
   </div>
 <hr>
 
